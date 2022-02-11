@@ -52,7 +52,7 @@ class GmailAPI {
         // console.log("Searched Results: " + JSON.stringify(response.data));
 
         
-        threadId = await response.data["messages"].id;
+        threadId = await response.data["messages"][0].id;
         console.log("ThreadId: " + threadId);
       })
       .catch(function (error) {
